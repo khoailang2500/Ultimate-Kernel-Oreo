@@ -2,9 +2,9 @@
 import init.samsungexynos7420.usb.rc
 import init.wifi.rc
 import init.baseband.rc
-import init.carrier.rc
 import init.fac.rc
 import init.exynos7420_fac.rc
+import init.gps.rc
 
 on early-init
     mount debugfs /sys/kernel/debug /sys/kernel/debug
@@ -560,8 +560,6 @@ on fs
     chown system radio /sys/class/fingerprint/fingerprint/type_check
     chown system radio /sys/class/fingerprint/fingerprint/name
     chown system radio /sys/class/fingerprint/fingerprint/vendor
-    chown system radio /sys/class/fingerprint/fingerprint/adm
-    chown system radio /sys/class/fingerprint/fingerprint/retain_pin
 
 # Accelerometer_sensor
     chown system radio /sys/class/sensors/accelerometer_sensor/raw_data

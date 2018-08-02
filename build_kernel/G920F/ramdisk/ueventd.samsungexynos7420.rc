@@ -143,6 +143,8 @@
 /dev/bbd_sio              0660   system     system
 /dev/bbd_patch            0660   system     system
 /dev/ttyBCM*              0660   system     system
+# FM Radio
+/dev/radio0               0660   system     audio
 # Google FRP solution
 /dev/block/platform/15570000.ufs/by-name/PERSISTENT    0660    system    system
 
