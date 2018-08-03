@@ -65,7 +65,7 @@ export ARCH=arm64;
 export SUB_ARCH=arm64;
 
 # G920F
-if [ "$TARGET" = "G920F" ] ; then
+if [ "$TARGET" = "N920C" ] ; then
 	export KERNEL_CONFIG="ultimate_defconfig";
 fi;
 
