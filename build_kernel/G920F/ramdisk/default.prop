@@ -27,9 +27,9 @@ dalvik.vm.usejit=true
 dalvik.vm.usejitprofiles=true
 dalvik.vm.dexopt.secondary=true
 dalvik.vm.appimageformat=lz4
-pm.dexopt.first-boot=quicken
-pm.dexopt.boot=verify
-pm.dexopt.install=quicken
+pm.dexopt.first-boot=interpret-only
+pm.dexopt.boot=verify-profile
+pm.dexopt.install=interpret-only
 pm.dexopt.bg-dexopt=speed-profile
 pm.dexopt.ab-ota=speed-profile
 debug.atrace.tags.enableflags=0
@@ -39,5 +39,6 @@ debug.atrace.tags.enableflags=0
 ro.bootimage.build.date=Tue Jul 10 16:57:03 KST 2018
 ro.bootimage.build.date.utc=1531209423
 ro.bootimage.build.fingerprint=samsung/a8xelteskt/a8xelteskt:8.0.0/R16NW/A810SKSU2CRG3:user/test-keys
+
 # Secure-Storage
 ro.securestorage.support=false
