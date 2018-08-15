@@ -379,11 +379,47 @@ LINUXINCLUDE    := \
 
 KBUILD_CPPFLAGS := -D__KERNEL__
 
-KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \
-		   -fno-strict-aliasing -fno-common \
-		   -Wno-format-security \
-		   -fno-delete-null-pointer-checks \
-		   -fdiagnostics-show-option
+# Warnings
+KBUILD_CFLAGS := \
+	-Wall \
+	-Werror \
+	-Wundef \
+	-Wno-format-security \
+	-Wno-implicit-function-declaration \
+	-Wno-maybe-uninitialized \
+	-Wno-trigraphs
+
+# Flags
+KBUILD_CFLAGS += \
+	-fdiagnostics-show-option \
+	-ffast-math \
+	-fno-common \
+	-fno-delete-null-pointer-checks \
+	-fno-strict-aliasing \
+	-march=armv8-a+crc \
+	-ftree-vectorize \
+	-mcpu=cortex-a57.cortex-a53 \
+	-mtune=cortex-a57.cortex-a53 \
+	-std=gnu89 \
+	-Ofast
+
+# Linaro
+KBUILD_CFLAGS += \
+	-Wno-array-bounds \
+	-Wno-bool-operation \
+	-Wno-discarded-array-qualifiers \
+	-Wno-int-in-bool-context \
+	-Wno-format-overflow \
+	-Wno-format-truncation \
+	-Wno-logical-not-parentheses \
+	-Wno-memset-elt-size \
+	-Wno-misleading-indentation \
+	-Wno-nonnull \
+	-Wno-switch-unreachable \
+	-Wno-switch-bool \
+	-Wno-tautological-compare \
+	-Wno-unused-const-variable
+
 KBUILD_AFLAGS_KERNEL :=
 KBUILD_CFLAGS_KERNEL :=
 KBUILD_AFLAGS   := -D__ASSEMBLY__
