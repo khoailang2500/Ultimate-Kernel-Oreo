@@ -98,8 +98,8 @@ static struct apll_freq exynos7420_apll_freq_CA57[] = {
 	 * PLL M, P, S values are NOT used, Instead CCF clk_set_rate is used
 	 */
 	APLL_ATLAS_FREQ(2496, 0, 0, 2, 6, 6, 6, 1, 5, 6, 208, 2, 0),    /* ARM L0: 2.5GHz  */
-	APLL_ATLAS_FREQ(2400, 0, 0, 2, 6, 6, 6, 1, 5, 6, 200, 2, 0),    /* ARM L1: 2.4GMHz */
-	APLL_ATLAS_FREQ(2304, 0, 0, 2, 6, 6, 6, 1, 5, 6, 192, 2, 0),    /* ARM L2: 2.3GMHz */
+	APLL_ATLAS_FREQ(2400, 0, 0, 2, 6, 6, 6, 1, 5, 6, 200, 2, 0),    /* ARM L1: 2.4GHz */
+	APLL_ATLAS_FREQ(2304, 0, 0, 2, 6, 6, 6, 1, 5, 6, 192, 2, 0),    /* ARM L2: 2.3GHz */
 	APLL_ATLAS_FREQ(2200, 0, 0, 2, 6, 6, 6, 1, 5, 6, 275, 3, 0),    /* ARM L3: 2.2GHz  */
 	APLL_ATLAS_FREQ(2100, 0, 0, 2, 6, 6, 6, 1, 5, 6, 175, 2, 0),    /* ARM L4: 2.1GHz  */
 	APLL_ATLAS_FREQ(2000, 0, 0, 2, 6, 6, 6, 1, 5, 6, 250, 3, 0),    /* ARM L5: 2.0GHz  */
@@ -201,10 +201,10 @@ static int exynos7420_bus_table_CA57[CPUFREQ_LEVEL_END_CA57] = {
 	 543000,		/* 1.0 GHz */
 	 416000,		/* 900 MHz */
 	 416000,		/* 800 MHz */
-	      0,		/* 700 MHz */
-	      0,		/* 600 MHz */
-	      0,		/* 500 MHz */
-	      0,		/* 400 MHz */
+	 348000,		/* 700 MHz */
+	 348000,		/* 600 MHz */
+	 276000,		/* 500 MHz */
+	 276000,		/* 400 MHz */
 	      0,		/* 300 MHz */
 	      0,		/* 200 MHz */
 };
@@ -390,7 +390,7 @@ static void __init set_volt_table_CA57(void)
 	max_support_idx_CA57 = L13;	/* 1.2 GHz */
 #endif
 
-	min_support_idx_CA57 = L17;	/* 800 MHz */
+	min_support_idx_CA57 = L21;	/* 400 MHz */
 
 	pr_info("CPUFREQ of CA57 max_freq : L%d %u khz\n", max_support_idx_CA57,
 		exynos7420_freq_table_CA57[max_support_idx_CA57].frequency);
