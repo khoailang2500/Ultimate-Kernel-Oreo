@@ -141,7 +141,7 @@ FUNC_BUILD_KERNEL()
 		echo "checking ARCH="$ARCH " BUILD_CROSS_COMPILE="$BUILD_CROSS_COMPILE " KERNEL_DEFCONFIG="$KERNEL_DEFCONFIG " BUILD_JOB_NUMBER="$BUILD_JOB_NUMBER
 # checking ARCH=arm64  BUILD_CROSS_COMPILE=/home/osboxes/android/ndk/android-ndk-r16b/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-  KERNEL_DEFCONFIG=exynos7420-noblelte_nemesis_defconfig  BUILD_JOB_NUMBER=1
 
-	# FUNC_CLEAN_DTB
+	FUNC_CLEAN_DTB
 
 	make -j$BUILD_JOB_NUMBER ARCH=$ARCH \
 		CROSS_COMPILE=$BUILD_CROSS_COMPILE \
