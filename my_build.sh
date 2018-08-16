@@ -74,8 +74,8 @@ FUNC_BUILD_DTIMAGE_TARGET()
 
 	case $MODEL in
 	noblelte)
-		# DTSFILES="exynos7420-noblelte_eur_open_09"
-		DTSFILES="exynos7420-noblelte_eur_open_00 exynos7420-noblelte_eur_open_01 exynos7420-noblelte_eur_open_02 exynos7420-noblelte_eur_open_03 exynos7420-noblelte_eur_open_04 exynos7420-noblelte_eur_open_05 exynos7420-noblelte_eur_open_06 exynos7420-noblelte_eur_open_08 exynos7420-noblelte_eur_open_09"
+		DTSFILES="exynos7420-noblelte_eur_open_09"
+		# DTSFILES="exynos7420-noblelte_eur_open_00 exynos7420-noblelte_eur_open_01 exynos7420-noblelte_eur_open_02 exynos7420-noblelte_eur_open_03 exynos7420-noblelte_eur_open_04 exynos7420-noblelte_eur_open_05 exynos7420-noblelte_eur_open_06 exynos7420-noblelte_eur_open_08 exynos7420-noblelte_eur_open_09"
 		;;
 	zeroflte)
 		DTSFILES="exynos7420-zeroflte_eur_open_06"
