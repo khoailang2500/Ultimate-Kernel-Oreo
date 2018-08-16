@@ -150,7 +150,7 @@ FUNC_BUILD_KERNEL()
 	make -j$BUILD_JOB_NUMBER ARCH=$ARCH \
 		CROSS_COMPILE=$BUILD_CROSS_COMPILE || exit -1
 
-	# FUNC_BUILD_DTIMAGE_TARGET
+	FUNC_BUILD_DTIMAGE_TARGET
 	
 	echo ""
 	echo "================================="
