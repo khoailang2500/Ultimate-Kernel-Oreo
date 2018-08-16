@@ -43,14 +43,18 @@ else
 	TIMESTAMP=$KBUILD_BUILD_TIMESTAMP
 fi
 if test -z "$KBUILD_BUILD_USER"; then
-	LINUX_COMPILE_BY=$(whoami | sed 's/\\/\\\\/')
+	# LINUX_COMPILE_BY=$(whoami | sed 's/\\/\\\\/')
+  LINUX_COMPILE_BY="khoailang2500"
 else
-	LINUX_COMPILE_BY=$KBUILD_BUILD_USER
+	# LINUX_COMPILE_BY=$KBUILD_BUILD_USER
+  LINUX_COMPILE_BY="khoailang2500"
 fi
 if test -z "$KBUILD_BUILD_HOST"; then
-	LINUX_COMPILE_HOST=`hostname`
+	# LINUX_COMPILE_HOST=`hostname`
+  LINUX_COMPILE_HOST="host-2500"
 else
-	LINUX_COMPILE_HOST=$KBUILD_BUILD_HOST
+	# LINUX_COMPILE_HOST=$KBUILD_BUILD_HOST
+  LINUX_COMPILE_HOST="host-2500"
 fi
 
 UTS_VERSION="#$VERSION"
@@ -76,7 +80,8 @@ UTS_TRUNCATE="cut -b -$UTS_LEN"
   echo \#define LINUX_COMPILE_BY \"`echo $LINUX_COMPILE_BY | $UTS_TRUNCATE`\"
   echo \#define LINUX_COMPILE_HOST \"`echo $LINUX_COMPILE_HOST | $UTS_TRUNCATE`\"
 
-  echo \#define LINUX_COMPILER \"`$CC -v 2>&1 | tail -n 1`\"
+  # echo \#define LINUX_COMPILER \"`$CC -v 2>&1 | tail -n 1`\"
+  echo \#define LINUX_COMPILER \"Linaro GCC 7.3-2018.05 \"
 ) > .tmpcompile
 
 # Only replace the real compile.h if the new one is different,
