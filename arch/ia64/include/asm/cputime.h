@@ -26,4 +26,5 @@
 extern void arch_vtime_task_switch(struct task_struct *tsk);
 #endif /* CONFIG_VIRT_CPU_ACCOUNTING_NATIVE */
 
+#define cputime64_sub(__a, __b)		((__a) - (__b))
 #endif /* __IA64_CPUTIME_H */
