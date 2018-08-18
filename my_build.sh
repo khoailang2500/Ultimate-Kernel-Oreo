@@ -1,7 +1,8 @@
 #!/bin/bash
 # kernel build script by Tkkg1994 v0.6 (optimized from apq8084 kernel source)
 
-export MODEL=noblelte
+# support noblelte -- nobleltetmo
+export MODEL=nobleltetmo
 export ARCH=arm64
 
 # GG Cloud setup
@@ -37,7 +38,8 @@ then
 	KERNEL_DEFCONFIG=exynos7420-zeroltetmo_nemesis_defconfig
 else if [ $MODEL = nobleltetmo ]
 then
-	KERNEL_DEFCONFIG=exynos7420-nobleltetmo_nemesis_defconfig
+	# KERNEL_DEFCONFIG=exynos7420-nobleltetmo_nemesis_defconfig
+	KERNEL_DEFCONFIG=ultimate_defconfig_tmo
 else if [ $MODEL = zenltetmo ]
 then
 	KERNEL_DEFCONFIG=exynos7420-zenltetmo_nemesis_defconfig
