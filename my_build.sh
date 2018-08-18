@@ -2,7 +2,7 @@
 # kernel build script by Tkkg1994 v0.6 (optimized from apq8084 kernel source)
 
 # support noblelte -- nobleltetmo
-export MODEL=nobleltetmo
+export MODEL=noblelte
 export ARCH=arm64
 
 # GG Cloud setup
@@ -76,7 +76,8 @@ FUNC_BUILD_DTIMAGE_TARGET()
 
 	case $MODEL in
 	noblelte)
-		DTSFILES="exynos7420-noblelte_eur_open_09"
+		DTSFILES="exynos7420-noblelte_usa_09"
+		# DTSFILES="exynos7420-noblelte_eur_open_09"
 		# DTSFILES="exynos7420-noblelte_eur_open_00 exynos7420-noblelte_eur_open_01 exynos7420-noblelte_eur_open_02 exynos7420-noblelte_eur_open_03 exynos7420-noblelte_eur_open_04 exynos7420-noblelte_eur_open_05 exynos7420-noblelte_eur_open_06 exynos7420-noblelte_eur_open_08 exynos7420-noblelte_eur_open_09"
 		;;
 	zeroflte)
